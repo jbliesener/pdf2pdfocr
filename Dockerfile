@@ -3,7 +3,7 @@
 # Dockerfile version 6.0 (Ubuntu 22.04)
 #
 FROM ubuntu:22.04
-LABEL maintainer="Leonardo F. Cardoso <leonardo.f.cardoso@gmail.com>"
+LABEL maintainer="Jorg Neves Bliesener <jbliesener@bliesener.com>, Leonardo F. Cardoso <leonardo.f.cardoso@gmail.com>"
 
 RUN useradd docker \
   && mkdir /home/docker \
@@ -23,7 +23,7 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
     python3-pip \
     python3-setuptools\
     tesseract-ocr \
-    tesseract-ocr-osd tesseract-ocr-por tesseract-ocr-eng \
+    tesseract-ocr-osd tesseract-ocr-por tesseract-ocr-eng tesseract-ocr-deu \
   && rm -rf /var/lib/apt/lists/*
 
 # Allow IM to process PDF
